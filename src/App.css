@@ -1,0 +1,37 @@
+.excluir-button {
+    color: white;
+    background-color: #f44336;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+.titulo-cell {
+    font-weight: bold; 
+}
+
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.book-table th {
+    background-color: #333; 
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.book-table td {
+    padding: 10px;
+}
+
+.book-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; 
+}
+
+.resumo-cell, .editora-cell, .autores-cell {
+    max-width: 200px; 
+    word-wrap: break-word;
+}
