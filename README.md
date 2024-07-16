@@ -1,6 +1,3 @@
-Material de orientações para desenvolvimento da missão
-prática do 3º nível de conhecimento.
-
 # RPG0010 - Meu primeiro framework
 
 Criação de front-end web com base em React JS ou Next JS, com utilização de bases
