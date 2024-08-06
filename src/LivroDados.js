@@ -33,28 +33,32 @@ const LivroDados = () => {
     navigate('/');
   };
 
-  return (
-    <main>
+   return (
+    <div className="container mt-4">
       <h2>Dados do Livro</h2>
       <form onSubmit={salvarDados}>
-        <label>Título:</label>
-        <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} placeholder="Insira o título do livro" />
-        <br />
-        <label>Resumo:</label>
-        <textarea value={resumo} onChange={(e) => setResumo(e.target.value)} placeholder="Resumo do livro" />
-        <br />
-        <label>Editora:</label>
-        <select value={codEditora} onChange={tratarCombo}>
+        <div className="mb-3">
+          <label htmlFor="titulo" className="form-label">Título</label>
+          <input type="text" className="form-control" id="titulo" placeholder="Titulo" />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="resumo" className="form-label">Resumo</label>
+          <textarea className="form-control" id="resumo" rows="3"></textarea>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="editora" className="form-label">Editora</label>
+          <select value={codEditora} onChange={tratarCombo} className='form-select'>
           {opcoes.map(opcao => <option key={opcao.value} value={opcao.value}>{opcao.text}</option>)}
         </select>
-        <br />
-        <label>Autores (1 por linha):</label>
-        <textarea value={autores} onChange={(e) => setAutores(e.target.value)} placeholder="Insira os autores do livro separados por linha" />
-        <br />
-        <button type="submit" style={{ backgroundColor: 'blue', color: 'white' }}>Salvar Dados</button>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="autores" className="form-label">Autores (1 por linha)</label>
+          <textarea className="form-control" id="autores" rows="3"></textarea>
+        </div>
+        <button type="submit" className="btn btn-primary">Salvar Dados</button>
       </form>
-    </main>
+    </div>
   );
-};
+}
 
 export default LivroDados;
