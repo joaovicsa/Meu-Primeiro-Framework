@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { ControleLivros } from './controle/ControleLivros';
-import { ControleEditora } from './controle/ControleEditora';
-
+import  ControleLivros  from './controle/ControleLivros';
+import  ControleEditora  from './controle/ControleEditora';
+import './App.css';
 const LivroLista = () => {
     const controleLivro = new ControleLivros();
     const controleEditora = new ControleEditora();
@@ -50,7 +50,7 @@ const LivroLista = () => {
     };
 
   return (
-        <main>
+        <main className='lista-livro'>
             <h1>Catálogo de Livros</h1>
             <table className="book-table">
                 <thead>
