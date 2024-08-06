@@ -11,8 +11,22 @@
     font-weight: bold; 
 }
 
-.book-table {
+.lista-livro {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-livro h1 {
     width: 100%;
+    text-align: start;
+    padding-left: 3em;
+}
+
+.book-table {
+    width: 90%;
     border-collapse: collapse;
 }
 
