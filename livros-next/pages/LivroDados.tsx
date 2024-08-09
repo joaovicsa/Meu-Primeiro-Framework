@@ -45,8 +45,8 @@ const incluir = async (e: FormEvent<HTMLFormElement>) => {
   const sucesso = await incluirLivro(livro);
   if (sucesso) router.push('/LivroLista');
 };
-  return (
-    <div className={styles.container}>
+    return (
+    <div className={styles.containerDados}>
       <Head>
         <title>Loja Next</title>
         <meta name="description" content="Descrição da Loja Next" />
@@ -54,22 +54,43 @@ const incluir = async (e: FormEvent<HTMLFormElement>) => {
       
       <Menu />
       
-      <main>
+      <main className={styles.mainDados}>
         <h1>Inclusão de Livro</h1>
-        <form onSubmit={incluir}>
-          <input type="text" value={titulo} onChange={(e) => setTitulo(e.target.value)} placeholder="Título" />
-          <textarea value={resumo} onChange={(e) => setResumo(e.target.value)} placeholder="Resumo" />
-          <textarea value={autores} onChange={(e) => setAutores(e.target.value)} placeholder="Autores" />
-          <select value={codEditora} onChange={tratarCombo}>
-            {opcoes.map(option => (
-              <option key={option.value} value={option.value}>{option.text}</option>
+        <form onSubmit={incluir} className={styles.form}>
+          <input
+            type="text"
+            value={titulo}
+            onChange={(e) => setTitulo(e.target.value)}
+            placeholder="Título"
+            className={styles.input}
+          />
+          <textarea
+            value={resumo}
+            onChange={(e) => setResumo(e.target.value)}
+            placeholder="Resumo"
+            className={styles.textarea}
+          />
+          <textarea
+            value={autores}
+            onChange={(e) => setAutores(e.target.value)}
+            placeholder="Autores"
+            className={styles.textarea}
+          />
+          <select value={codEditora} onChange={tratarCombo} className={styles.select}>
+            {opcoes.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.text}
+              </option>
             ))}
           </select>
-          <button type="submit">Incluir</button>
+          <button type="submit" className={styles.button}>
+            Incluir
+          </button>
         </form>
       </main>
     </div>
   );
 };
+
 
 export default LivroDados;

@@ -41,23 +41,23 @@ const LivroLista: React.FC = () => {
     }
   };
 
-  return (
-    <div className={styles.container}>
-       <Head>
+   return (
+    <div className={styles.containerLista}>
+      <Head>
         <title>Loja Next</title>
         <meta name="description" content="Descrição da Loja Next" />
       </Head>
       
       <Menu />
       
-      <main>
+      <main className={styles.mainLista}>
         <h1>Lista de Livros</h1>
-        <table>
-          <thead>
+        <table className={styles.table}>
+          <thead className={styles.tableHeader}>
             <tr>
-              <th>Código</th>
-              <th>Título</th>
-              <th>Ações</th>
+              <th className={styles.tableCell}>Código</th>
+              <th className={styles.tableCell}>Título</th>
+              <th className={styles.tableCell}>Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -73,10 +73,10 @@ const LivroLista: React.FC = () => {
 
 const LinhaLivro: React.FC<{ livro: Livro; excluir: () => void }> = ({ livro, excluir }) => (
   <tr>
-    <td>{livro.codigo}</td>
-    <td>{livro.titulo}</td>
-    <td>
-      <button onClick={excluir}>Excluir</button>
+      <td className={styles.tableCell}>{livro.codigo}</td>
+    <td className={styles.tableCell}>{livro.titulo}</td>
+    <td className={styles.tableCell}>
+      <button onClick={excluir} className={styles.deleteButton}>Excluir</button>
     </td>
   </tr>
 );
