@@ -6,9 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export const Menu: React.FC = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
-      <Link href="/" passHref>
-      </Link>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Link href="/" passHref>
